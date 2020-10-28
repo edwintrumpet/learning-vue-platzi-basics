@@ -23,7 +23,7 @@ Vue.component('CoinDetail', {
       <input type="number" v-model="value">
       <span>{{ convertedValue }}</span>
 
-      <slot></slot>
+      <slot name="hi"></slot>
 
       <ul v-show="showPrices">
         <li
@@ -35,6 +35,8 @@ Vue.component('CoinDetail', {
           {{ i }} - {{ p.day }} - {{ p.value }}
         </li>
       </ul>
+
+      <slot name="bye"></slot>
     </div>
   `,
 
