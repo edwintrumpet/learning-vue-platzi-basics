@@ -63,6 +63,16 @@ Vue.component('CoinDetail', {
       this.showPrices = !this.showPrices
       this.$emit('change-color', this.showPrices ? 'ff96c8' : '3d3d3d')
     }
+  },
+
+  created () {
+    // Se usa para obtener datos de una API
+    console.log('created CoinDetails...')
+  },
+
+  mounted () {
+    // Ya tengo accesible el DOM y puedo manipular etiquetas
+    console.log('mounted CoinDetails...')
   }
 })
 
@@ -93,5 +103,15 @@ new Vue({
     updateColor (color) {
       this.color = color || this.color.split('').reverse().join('')
     }
+  },
+
+  created () {
+    // Se usa para obtener datos de una API
+    console.log('created...')
+  },
+
+  mounted () {
+    // Ya tengo accesible el DOM y puedo manipular etiquetas
+    console.log('mounted...')
   }
 })
